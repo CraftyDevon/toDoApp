@@ -4,6 +4,9 @@ $(document).ready(function() {
 	var todayDo = _.template($("#todayTmpl").html(), todayToDos);
 	var tomorrowDo = _.template($("#tomorrowTmpl").html(), tomorrowToDos);
 	
+$(".duetodayul").append(todayDo);
+	$(".duetomorrowul").append(tomorrowDo);
+
 
 
 
@@ -15,9 +18,11 @@ $(document).ready(function() {
 	var todayToDosObj = {
 
 					todayDo: todayTask
-	}
+	};
 
 	todayToDos.unshift(todayToDosObj);
+	var todayTaskString = _.template($("#todayTmpl").html(), todayToDos);
+	$(".duetodayul").html(todayTaskString);
 
 
 	console.log(todayTask);
@@ -31,10 +36,7 @@ $(document).ready(function() {
 
 
 
-	$(".duetodayul").append(todayDo);
-	$(".duetomorrowul").append(tomorrowDo);
-
-
+	
 
 
 
