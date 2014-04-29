@@ -107,16 +107,24 @@ body {
         padding: 0 0 50px 0;
     }
 
-    
+
+    .thedoer ul.switcher{
+        width: 80%;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+
 
     .thedoer ul.switcher li{
-            list-style: none;
-            display: inline-block;
+        list-style: none;
+        display: inline-block;
+        padding: 20px 0 0 0;
 
     }
 
     .thedoer ul.switcher li a{
-        padding: 5px 10px;
+        padding: 5px 20px;
     }
 
 
