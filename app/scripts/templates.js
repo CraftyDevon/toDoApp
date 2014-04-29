@@ -3,9 +3,13 @@ $(document).ready(function() {
 
 	var todayDo = _.template($("#todayTmpl").html(), todayToDos);
 	var tomorrowDo = _.template($("#tomorrowTmpl").html(), tomorrowToDos);
+	var CompletedDo = _.template($("#completeTmpl").html(), completedToDos);
+
 	
 $(".duetodayul").append(todayDo);
 	$(".duetomorrowul").append(tomorrowDo);
+		$(".completeditems").append(CompletedDo);
+
 
 
 
@@ -21,8 +25,13 @@ $(".duetodayul").append(todayDo);
 	};
 
 	todayToDos.unshift(todayToDosObj);
+
 	var todayTaskString = _.template($("#todayTmpl").html(), todayToDos);
+
+	$(".taskToday").val(" ");
 	$(".duetodayul").html(todayTaskString);
+
+
 
 
 	console.log(todayTask);

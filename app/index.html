@@ -39,10 +39,23 @@
 
 
 
-        <ul>
             <li> <%= tomorrowToDos.tomorrowDo %> </li>
 
-        </ul>
+
+    <% }); %>
+
+
+</script>
+
+
+<script type ="template/html" id="completeTmpl">
+
+    <% _.each(completedToDos, function(post, index, list) { %>
+
+
+
+            <li> <%= completedToDos.completedDo %> </li>
+
 
     <% }); %>
 
@@ -115,7 +128,8 @@
 
 
                     <div class="completedtasks">
-
+                    
+                    <ul class="completeditems dos"></ul>
                       
 
                     </div><!--end completed tasks-->
@@ -171,6 +185,7 @@
 
         <script src="scripts/todayarray.js"></script>
                 <script src="scripts/tomorrowarray.js"></script>
+                <script src="scripts/completearray.js"></script>
 
         <script src="scripts/templates.js"></script>
 
