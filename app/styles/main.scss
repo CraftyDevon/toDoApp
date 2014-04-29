@@ -161,7 +161,24 @@ body {
     }
 
     .thedoer ul.dos li{
+        width: 80%;
         list-style: none;
         padding: 20px 0 20px 0;
         border-bottom: 1px solid #797979;
+    }
+
+    .show{
+        display: block;
+    }
+
+    .duetoday, .duetomorrow, .completedtasks{
+        display: none;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .current{
+        color: green;
     }

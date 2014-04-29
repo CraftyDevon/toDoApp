@@ -20,7 +20,7 @@
 
         <script type ="template/html" id="todayTmpl">
 
-    <% .each(todaytoDos, function(todayToDos, index, list) { %>
+    <% _.each(todaytoDos, function(todayToDos, index, list) { %>
 
 
 
@@ -36,7 +36,7 @@
 
 <script type ="template/html" id="tomorrowTmpl">
 
-    <% .each(tomorrowToDos, function(post, index, list) { %>
+    <% _.each(tomorrowToDos, function(post, index, list) { %>
 
 
 
@@ -70,9 +70,9 @@
 
 
                         <ul class="switcher">
-                            <li><a href="#">Due Today</a></li>
-                            <li><a href="#">Due Tomorrow</a></li>
-                            <li><a href="#">Completed</a></li>
+                            <li><a href="#" class="duetodayLink">Due Today</a></li>
+                            <li><a href="#" class="duetomorrowLink">Due Tomorrow</a></li>
+                            <li><a href="#" class="completedtasksLink">Completed</a></li>
                         </ul>
 
 
@@ -81,13 +81,13 @@
                     
 
 
-                    <div class="duetoday">
+                    <div class="duetoday show">
 
                     <form action="">
                         
-                        <input type="text" placeholder="What's your to-do?">
+                        <input type="text" placeholder="What's your to-do for today?" class="taskToday">
 
-                        <button type="submit" class="addtask">ADD</button>
+                        <button type="submit" class="addtask" id="todaytodoSubmit">ADD</button>
 
                     </form>
 
@@ -101,13 +101,27 @@
                     </div><!--end due today-->
 
                     <div class="duetomorrow">
+
+                    <form action="">
                         
+                        <input type="text" placeholder="What's your to-do for tomorrow?">
+
+                        <button type="submit" class="addtask">ADD</button>
+
+                    </form>
+
+                    <ul class="dos">
+                        <li>Turtle</li>
+                        <li>All together now</li>
+                        <li>Complete this task, ok?</li>
+                    </ul>                        
 
                     </div><!--end due tomorrow-->
 
 
                     <div class="completedtasks">
-                        
+
+                      
 
                     </div><!--end completed tasks-->
                     
@@ -158,6 +172,8 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+                <script src="scripts/switcher.js"></script>
+
         <script src="scripts/todayArray.js"></script>
         <script src="scripts/templates.js"></script>
 
