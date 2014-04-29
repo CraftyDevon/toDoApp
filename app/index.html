@@ -25,7 +25,7 @@
 
 
         
-            <li> <%= todayToDos.todayDo %> </li>
+            <li class="toDoItem"> <span class="glyphicon glyphicon-ok"></span>  <span class="glyphicon glyphicon-remove removeToDo"></span><%= todayToDos.todayDo %>  </li>
 
 
     <% }); %>
@@ -39,7 +39,7 @@
 
 
 
-            <li> <%= tomorrowToDos.tomorrowDo %> </li>
+            <li class="toDoItem"> <%= tomorrowToDos.tomorrowDo %> </li>
 
 
     <% }); %>

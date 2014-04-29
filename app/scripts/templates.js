@@ -6,9 +6,9 @@ $(document).ready(function() {
 	var CompletedDo = _.template($("#completeTmpl").html(), completedToDos);
 
 	
-$(".duetodayul").append(todayDo);
+	$(".duetodayul").append(todayDo);
 	$(".duetomorrowul").append(tomorrowDo);
-		$(".completeditems").append(CompletedDo);
+	$(".completeditems").append(CompletedDo);
 
 
 
@@ -34,7 +34,9 @@ $(".duetodayul").append(todayDo);
 
 
 
-	console.log(todayTask);
+	$('.thedoer').on('click', '.removeToDo', function(){
+		$(this).closest("li").remove();
+
 	});
 
 
@@ -47,7 +49,7 @@ $(".duetodayul").append(todayDo);
 
 	
 
-
+});
 
 
 
