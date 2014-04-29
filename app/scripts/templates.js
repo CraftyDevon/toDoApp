@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var tomorrowDo = _.template($("#tomorrowTmpl").html(), tomorrowToDos);
 
 
-	$("duetoday").append(todayDo);
+	$(".duetoday").append(todayDo);
 
 
 
