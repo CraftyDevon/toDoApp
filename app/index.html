@@ -20,7 +20,7 @@
 
         <script type ="template/html" id="todayTmpl">
 
-    <% _.each(todaytoDos, function(todayToDos, index, list) { %>
+    <% _.each(todayToDos, function(todayToDos, index, list) { %>
 
 
 
@@ -41,7 +41,7 @@
 
 
         <ul>
-            <li> <%= today.tomorrowDo %> </li>
+            <li> <%= tomorrowToDos.tomorrowDo %> </li>
 
         </ul>
 
@@ -174,7 +174,9 @@
         <script src="scripts/main.js"></script>
                 <script src="scripts/switcher.js"></script>
 
-        <script src="scripts/todayArray.js"></script>
+        <script src="scripts/todayarray.js"></script>
+                <script src="scripts/tomorrowarray.js"></script>
+
         <script src="scripts/templates.js"></script>
 
         <!-- endbuild -->

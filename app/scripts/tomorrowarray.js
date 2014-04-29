@@ -2,16 +2,16 @@ var tomorrowToDos = [
 
 
 	{
-		tomorrowDo: "Fork somebody";
+		tomorrowDo: "Fork somebody"
 	},
 
 	{
-		tomorrowDo: "Edit the fork";
+		tomorrowDo: "Edit the fork"
 
 	},
 
 	{
-		tomorrowDo: "Merge the fork";
+		tomorrowDo: "Merge the fork"
 	}
 
 
