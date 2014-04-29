@@ -30,7 +30,10 @@ $(document).ready(function() {
 
 
 
-	$(".duetoday").append(todayDo);
+	$(".duetodayul").append(todayDo);
+	$(".duetomorrowul").append(tomorrowDo);
+
+
 
 
 
