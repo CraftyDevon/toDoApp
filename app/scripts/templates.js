@@ -7,8 +7,9 @@ $(document).ready(function() {
 
 
 
-	$("#todaytodoSubmit").on("submit", function(e) {
+	$("#todaytodoSubmit").submit (function(e) {
 	e.preventDefault();
+	
 	var todayTask = $(".taskToday").val();
 
 	var todayToDosObj = {
@@ -16,7 +17,7 @@ $(document).ready(function() {
 					todayDo: todayTask
 	}
 
-	todayToDos.unshift(todaysToDosObj);
+	todayToDos.unshift(todayToDosObj);
 
 
 	console.log(todayTask);
