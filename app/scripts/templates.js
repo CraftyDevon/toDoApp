@@ -3,12 +3,12 @@ $(document).ready(function() {
 
 	var todayDo = _.template($("#todayTmpl").html(), todayToDos);
 	var tomorrowDo = _.template($("#tomorrowTmpl").html(), tomorrowToDos);
-	var CompletedDo = _.template($("#completeTmpl").html(), completedToDos);
+	var completedDo = _.template($("#completeTmpl").html(), completedToDos);
 
 	
 	$(".duetodayul").append(todayDo);
 	$(".duetomorrowul").append(tomorrowDo);
-	$(".completeditems").append(CompletedDo);
+	$(".completeditemsul").append(completedDo);
 
 
 
@@ -36,20 +36,19 @@ $(document).ready(function() {
 
 });
 
-	$('.thedoer').on('click', '.removeToDo', function(){
-		$(this).closest("li").remove();
+	
 
-
-$(".duetoday").on("click", ".removeItem", function(){
+	//strikes through the complete task and adds it to complete array
+$(".duetoday").on("click", ".finishedItem", function(){
 		console.log ("click worked!");
-		completedToDos.push(todayToDos.todayDo);
-		$("li").addClass(".line");
+		completedToDos.push(completedToDos.completeDo);
+		$(this).closest("li").addClass("line");
 	});
 
 
 
 
-
+	//removes the to-do
 	$('.thedoer').on('click', '.removeToDo', function(){
 		$(this).closest("li").remove();
 
@@ -58,4 +57,5 @@ $(".duetoday").on("click", ".removeItem", function(){
 
 
 });
+
 

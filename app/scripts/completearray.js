@@ -1,7 +1,7 @@
 var completedToDos = [
 
 {
-		completeDo: "I'm complete",
+		completeDo: "I'm complete"
 	}
 
 
