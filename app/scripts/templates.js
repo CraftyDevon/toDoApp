@@ -31,25 +31,24 @@ $(document).ready(function() {
 	$(".taskToday").val(" ");
 	$(".duetodayul").html(todayTaskString);
 
+	
+	
+
+});
+
+$(".duetoday").on("click", ".removeItem", function(){
+		console.log ("click worked!");
+		completedToDos.push(todayToDos.todayDo);
+		$("li").addClass(".line");
+	});
+
 
 
 
 	$('.thedoer').on('click', '.removeToDo', function(){
 		$(this).closest("li").remove();
 
-	});
-
-
-
-
-
-
-
-
-
-	
-
-});
+	});	
 
 
 
