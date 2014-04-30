@@ -75,7 +75,7 @@ $(".duetoday").on("click", ".finishedItem", function(){
 		$(this).closest("li").remove();
 
 	});	
-
+//adding a comment just to try and push this again
 
 
 });
