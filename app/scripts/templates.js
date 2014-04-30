@@ -32,24 +32,13 @@ $(document).ready(function() {
 	$(".duetodayul").html(todayTaskString);
 
 
-
+});
 
 	$('.thedoer').on('click', '.removeToDo', function(){
 		$(this).closest("li").remove();
 
 	});
 
-
-
-
-
-
-
-
-
-	
-
-});
 
 
 
