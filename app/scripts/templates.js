@@ -40,9 +40,11 @@ $(document).ready(function() {
 
 	//strikes through the complete task and adds it to complete array
 $(".duetoday").on("click", ".finishedItem", function(){
-		console.log ("click worked!");
-		completedToDos.push(completedToDos.completeDo);
+		// var total = completedToDos.push();
+		// console.log (total);
 		$(this).closest("li").addClass("line");
+		var completedTask = $(this).closest("li");
+		$(".completedtasks").append(completedTask);
 	});
 
 
