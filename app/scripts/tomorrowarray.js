@@ -12,8 +12,10 @@ var tomorrowToDos = [
 
 	{
 		tomorrowDo: "Merge the fork"
+	},
+	{
+		tomorrowDo: "Merge the fork"
 	}
-
 
 
 

@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 
 
-
+	//Today Submit
 	$("#todaytodoSubmit").submit (function(e) {
 	e.preventDefault();
 	
@@ -32,14 +32,34 @@ $(document).ready(function() {
 	$(".duetodayul").html(todayTaskString);
 
 	
-	
+	});
 
-});
+		//Tomorrow Submit
+	$("#tomorrowtodoSubmit").submit (function(e) {
+	e.preventDefault();
+	
+	var tomorrowTask = $(".taskTomorrow").val();
+
+	var tomorrowToDosObj = {
+
+					tomorrowDo: tomorrowTask
+	};
+
+	tomorrowToDos.unshift(tomorrowToDosObj);
+
+	var tomorrowTaskString = _.template($("#tomorrowTmpl").html(), tomorrowToDos);
+
+	$(".taskTomorrow").val(" ");
+	$(".duetomorrowul").html(tomorrowTaskString);
+
+	
+	});
+
 
 	
 
 	//strikes through the complete task and adds it to complete array
-$(".duetoday").on("click", ".finishedItem", function(){
+	$(".duetoday").on("click", ".finishedItem", function(){
 		console.log ("click worked!");
 		completedToDos.push(completedToDos.completeDo);
 		$(this).closest("li").addClass("line");
